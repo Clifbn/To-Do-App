@@ -1,0 +1,107 @@
+.page {
+  min-height: 100vh;
+  background: #8b8b8b;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: black;
+}
+
+.card {
+  width: 100%;
+  max-width: 520px;
+  background: rgb(222, 222, 222);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  
+}
+
+.input {
+  flex: 1;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #255399;
+  font-size: 0.95rem;
+}
+
+.input::placeholder {
+    color:  black;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.addButton {
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background: #4f46e5;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.4rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.text {
+  flex: 1;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #2a6b3a;
+}
+
+.delete {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.delete:hover {
+  text-decoration: underline;
+}
+
+.placeholder {
+    color: black;
+}
