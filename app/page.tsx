@@ -63,58 +63,62 @@ export default function Home() {
   }
 
 
-    return (
-  <main className={styles.page}>
-    <div className={styles.card}>
-      <h1 className={styles.title}>To Do app</h1>
+  return (
+    <main className={styles.page}>
+      <div className={styles.card}>
+        <h1 className={styles.title}>To Do app</h1>
 
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <input
-          className={styles.input}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          placeholder="Write a to do"
-        />
-        <button className={styles.addButton} type="submit">
-          Add
-        </button>
-      </form>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <input
+            className={styles.input}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="Write a to do"
+          />
+          <button className={styles.addButton} type="submit">
+            Add
+          </button>
+        </form>
 
-      <ul className={styles.list}>
-        {todos.map((todo) => (
-          <li key={todo.id} className={styles.item}>
-            <span
-              className={`${styles.text} ${
-                todo.completed ? styles.completed : ""
-              }`}
-              onClick={() =>
-                setTodos(
-                  todos.map((t) =>
-                    t.id === todo.id
-                      ? { ...t, completed: !t.completed }
-                      : t
+        <ul className={styles.list}>
+          {todos.map((todo) => (
+            <li key={todo.id} className={styles.item}>
+              <span
+                className={`${styles.text} ${todo.completed ? styles.completed : ""
+                  }`}
+                onClick={() =>
+                  setTodos(
+                    todos.map((t) =>
+                      t.id === todo.id
+                        ? { ...t, completed: !t.completed }
+                        : t
+                    )
                   )
-                )
-              }
-            >
-              {todo.title}
-            </span>
+                }
+              >
+                {todo.title}
+              </span>
 
-            <button
-              className={styles.delete}
-              onClick={(e) => {
-                e.stopPropagation();
-                handleDelete(todo.id);
-              }}
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </main>
-);
+              <button
+                className={styles.delete}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleDelete(todo.id);
+                }}
+              >
+                Delete
+              </button>
+            </li>
+          ))}
+
+        </ul>
+      </div>
+      <p className={styles.footer}>github repo: https://github.com/Clifbn/To-Do-App</p>
+    </main>
+    
+  );
 
 
 }
+
+
